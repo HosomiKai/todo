@@ -13,6 +13,7 @@ export class AppComponent {
 
   addTodo() {
     if (this.todo) {
+      this.todos = [...this.todos]; // 有這段onChange才會被觸發？
       this.todos.push({
         text: this.todo,
         done: false

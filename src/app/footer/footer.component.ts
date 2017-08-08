@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -7,11 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 
 
-export class FooterComponent implements OnInit {
+export class FooterComponent implements OnInit, OnChanges {
   @Input('data') todos: any[] = [];
+  tooMore: Boolean = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngOnChanges() {
+    this.tooMore = this.todos.length > 5;
   }
 
 }
