@@ -56,3 +56,18 @@
   <p>Created by <a href="http://todomvc.com">you</a></p>
   <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
 </footer>
+
+
+
+<table>
+  <tr>
+    <td [attr.colspan]="colspan">Two Column</td>
+    <td>One Column</td>
+  </tr>
+</table>
+<!--
+  colspan="{{h}}" is just sugar for [colspan]="h" and
+  this in turn means: bind h to colspan property.
+  There is no colspan property in html, only colspan attribute.
+If you want to bind to an attribute use [attr.colspan]="h" syntax -->
+
