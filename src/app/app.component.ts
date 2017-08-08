@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   inputHint = '你需要完成什麼呢？';
   colspan = 3;
+  todos: any[] = [] ;
+
+  addTodo(todo: any) {
+    this.todos.push(todo);
+  }
 }
