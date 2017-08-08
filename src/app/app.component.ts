@@ -11,6 +11,9 @@ export class AppComponent {
   todos: any[] = [] ;
 
   addTodo(todo: any) {
-    this.todos.push(todo);
+    if (todo) {
+      this.todos.push(todo);
+    }
+
   }
 }
