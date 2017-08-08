@@ -9,10 +9,12 @@ export class AppComponent {
   inputHint = '你需要完成什麼呢？';
   colspan = 3;
   todos: any[] = [] ;
+  todo: String = '';
 
-  addTodo(todo: any) {
-    if (todo) {
-      this.todos.push(todo);
+  addTodo() {
+    if (this.todo) {
+      this.todos.push(this.todo);
+      this.todo = ''; // 加入之後輸入框清空
     }
 
   }
