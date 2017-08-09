@@ -20,6 +20,8 @@ export class AppComponent {
       });
       this.todo = ''; // 加入之後輸入框清空
     }
-
+  }
+  clearComplete() {
+     this.todos = this.todos.filter(item => !item.done);
   }
 }
